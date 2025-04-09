@@ -529,85 +529,97 @@
     font-weight: 700;
   }
 
-  /* Media Queries */
-  /* Laptop */
-  @media (max-width: 1366px) {
-    html {
-      font-size: 75%;
-    }
+  /* ====================
+   MEDIA QUERIES
+==================== */
+
+/* Laptop (<=1366px) */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
   }
-  
-  /* Tablet */
-  @media (max-width: 758px) {
-    html {
-      font-size: 62.5%;
-    }
-  
-    #hamburger-menu {
-      display: inline-block;
-    }
-  
-    .navbar .navbar-nav {
-      position: absolute;
-      top: 100%;
-      right: -100%;
-      background-color: #fff;
-      width: 30rem;
-      height: 100vh;
-      transition: 0.3s;
-    }
-  
-    .navbar .navbar-nav.active {
-      right: 0;
-    }
-  
-    .navbar .navbar-nav a {
-      color: #212121;
-      display: block;
-      margin: 1.5rem;
-      padding: 0.5rem;
-      font-size: 2rem;
-    }
-  
-    .navbar .navbar-nav a::after {
-      transform-origin: 0 0;
-    }
-  
-    .navbar .navbar-nav a:hover::after {
-      transform: scaleX(0.3);
-    }
-  
-    .navbar .search-form {
-      width: 90%;
-      right: 2rem;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-        text-align: center;
-      }
-
-    .product-katalog-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
 }
 
-/* Mobile Phone */
+/* Tablet (<=992px) */
+@media (max-width: 992px) {
+  .product-katalog-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet Kecil & HP (<=758px) */
+@media (max-width: 758px) {
+html {
+  font-size: 62.5%;
+}
+
+#hamburger-menu {
+  display: inline-block;
+}
+
+.navbar .navbar-nav {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  width: 30rem;
+  height: 100vh;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.navbar .navbar-nav.active {
+  right: 0;
+}
+
+.navbar .navbar-nav a {
+  display: block;
+  margin: 1.5rem;
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+
+.navbar .navbar-nav a::after {
+  transform-origin: 0 0;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.3);
+}
+
+.navbar .search-form {
+  width: 90%;
+  right: 2rem;
+}
+  .hero h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .product-katalog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* HP Kecil (<=450px) */
 @media (max-width: 450px) {
-    html {
-      font-size: 55%;
-    }
-
-    .product-katalog-container {
-        grid-template-columns: 1fr;
-      }
+  html {
+    font-size: 55%;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 0 1rem; /* kasih padding biar teks nggak nempel pinggir */
+    word-break: break-word; /* biar teks nggak meluber */
   }
 
-  @media (max-width: 992px) {
-    .product-katalog-container {
-      grid-template-columns: repeat(3, 1fr);
-    }
+  .hero {
+    padding: 2rem 1rem; /* tambahin ruang atas bawah & samping */
   }
+  .product-katalog-container {
+    grid-template-columns: 1fr;
+  }
+}
+
   
   
   
