@@ -618,6 +618,16 @@ html {
   .product-katalog-container {
     grid-template-columns: 1fr;
   }
+
+    .btn-primary {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .button-container {
+    gap: 6px;
+    padding-bottom: 8px;
+  }
 }
 
   
